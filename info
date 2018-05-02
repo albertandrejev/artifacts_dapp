@@ -1,0 +1,14 @@
+Compile contract:
+$ solc --bin --abi UselessWorker.sol
+
+$ geth console --dev    
+
+$ truffle create contract <contract name>
+$ truffle migrate --reset
+$ truffle console
+>migrate --reset
+>var ca = CryptArtifacts.at(CryptArtifacts.address)
+>ca.regMaster("Admin")
+>ca.orderArt(2)
+>var event = ca.ArtOrdered();event.watch(function(err, result){ console.log(result.args) });
+>
